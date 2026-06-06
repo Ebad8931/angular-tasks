@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
     styleUrl: './two-sum.component.scss'
 })
 export class TwoSumComponent {
-
+    a = 10;
+    b = 5;
+    sum = this.a + this.b;
 }
