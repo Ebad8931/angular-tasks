@@ -3,11 +3,12 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "composite": true,
     "outDir": "./out-tsc/spec",
+    "rootDir": "./src",
     "types": ["jest", "node"],
     "esModuleInterop": true,
     "emitDecoratorMetadata": true
   },
-  "files": ["src/test.ts"],
-  "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts"]
 }
