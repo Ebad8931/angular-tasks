@@ -13,3 +13,13 @@ describe('TwoSumComponent', () => {
             .compileComponents();
 
         fixture = TestBed.createComponent(TwoSumComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
+
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
+});
+
+
