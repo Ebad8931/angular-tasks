@@ -6,6 +6,10 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.form-group {
+  margin-bottom: 1rem;
+}
+
 label {
   display: block;
   margin-bottom: 0.25rem;
@@ -36,6 +40,16 @@ label {
   outline: none;
 }
 
+.price-info {
+  margin-top: 1rem;
+}
+
 .price-info p {
   font-size: 1.2rem;
+  margin: 0.75rem 0;
+}
+
+.price {
+  font-weight: 700;
+  color: #007bff;
 }
