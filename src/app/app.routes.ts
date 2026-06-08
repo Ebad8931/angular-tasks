@@ -4,6 +4,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { ImageContainerComponent } from './components/image-container/image-container.component';
 import { BasicCounterComponent } from './components/basic-counter/basic-counter.component';
 import { KeyboardCounterComponent } from './components/keyboard-counter/keyboard-counter.component';
+import { SimpleCartComponent } from './components/simple-cart/simple-cart.component';
 
 export const routes: Routes = [
     { path: '', component: LandingPageComponent },  // Default route
@@ -11,5 +12,6 @@ export const routes: Routes = [
     { path: 'image-container', component: ImageContainerComponent },
     { path: 'basic-counter', component: BasicCounterComponent },
     { path: 'keyboard-counter', component: KeyboardCounterComponent },
+    { path: 'simple-cart', component: SimpleCartComponent },
     { path: '**', redirectTo: '' }
 ];
