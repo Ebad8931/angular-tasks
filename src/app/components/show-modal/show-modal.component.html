@@ -1,7 +1,7 @@
 <div class="container">
-  <button class="toggle-btn">Show</button>
+  <button (click)="toggleModal()" class="toggle-btn">Show</button>
 
-  <div class="content-box">
+  <div *ngIf="displayModal" class="content-box">
     <p>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum qui
       praesentium ratione repellat, eius neque dolorem exercitationem soluta
