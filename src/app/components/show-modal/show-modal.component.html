@@ -1,0 +1,16 @@
+<div class="container">
+  <button (click)="displayModal = !displayModal" class="toggle-btn">
+    Show
+  </button>
+
+  @if (displayModal) {
+    <div class="content-box">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum qui
+        praesentium ratione repellat, eius neque dolorem exercitationem soluta
+        laudantium quasi doloremque quod quae accusamus, consequuntur suscipit!
+        Ducimus aut expedita tempora.
+      </p>
+    </div>
+  }
+</div>

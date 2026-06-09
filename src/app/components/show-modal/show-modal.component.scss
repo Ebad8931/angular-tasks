@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem;
+  min-height: 100vh;
+  position: relative;
+}
+
+.toggle-btn {
+  margin-top: 1.25rem;
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 2.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  top: 0;
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+.content-box {
+  margin-top: 5rem;
+  padding: 1rem;
+  max-width: 50rem;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.485);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
