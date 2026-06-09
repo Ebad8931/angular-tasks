@@ -5,6 +5,7 @@ import { ImageContainerComponent } from './components/image-container/image-cont
 import { BasicCounterComponent } from './components/basic-counter/basic-counter.component';
 import { KeyboardCounterComponent } from './components/keyboard-counter/keyboard-counter.component';
 import { SimpleCartComponent } from './components/simple-cart/simple-cart.component';
+import { ShowModalComponent } from './components/show-modal/show-modal.component';
 
 export const routes: Routes = [
     { path: '', component: LandingPageComponent },  // Default route
@@ -13,5 +14,6 @@ export const routes: Routes = [
     { path: 'basic-counter', component: BasicCounterComponent },
     { path: 'keyboard-counter', component: KeyboardCounterComponent },
     { path: 'simple-cart', component: SimpleCartComponent },
+    { path: 'show-modal', component: ShowModalComponent },
     { path: '**', redirectTo: '' }
 ];
