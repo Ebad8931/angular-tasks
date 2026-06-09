@@ -1,5 +1,7 @@
 <div class="container">
-  <button (click)="toggleModal()" class="toggle-btn">Show</button>
+  <button (click)="displayModal = !displayModal" class="toggle-btn">
+    Show
+  </button>
 
   <div *ngIf="displayModal" class="content-box">
     <p>

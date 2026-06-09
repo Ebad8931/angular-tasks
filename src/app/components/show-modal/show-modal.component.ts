@@ -9,11 +9,5 @@ import { NgIf } from "@angular/common";
   styleUrl: './show-modal.component.scss'
 })
 export class ShowModalComponent {
-
   displayModal: boolean = false;
-
-  toggleModal() {
-    this.displayModal = !this.displayModal;
-  }
-
 }
