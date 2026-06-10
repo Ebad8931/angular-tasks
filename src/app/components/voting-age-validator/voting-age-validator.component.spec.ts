@@ -10,7 +10,7 @@ describe('VotingAgeValidatorComponent', () => {
     await TestBed.configureTestingModule({
       imports: [VotingAgeValidatorComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(VotingAgeValidatorComponent);
     component = fixture.componentInstance;
@@ -19,5 +19,21 @@ describe('VotingAgeValidatorComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should mark the voter as eligible when age is 18 or older', () => {
+    component.age = 18;
+    component.checkEligibility();
+    expect(component.isEligible).toBe(true);
+
+    component.age = 19;
+    component.checkEligibility();
+    expect(component.isEligible).toBe(true);
+  });
+
+  it('should mark the voter as not eligible when age is under 18', () => {
+    component.age = 17;
+    component.checkEligibility();
+    expect(component.isEligible).toBe(false);
   });
 });
