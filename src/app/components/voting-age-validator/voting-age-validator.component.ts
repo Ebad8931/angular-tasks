@@ -5,7 +5,7 @@ import { FormsModule } from "@angular/forms";
 @Component({
   selector: 'app-voting-age-validator',
   standalone: true,
-  imports: [NgSwitch, NgSwitchCase, NgSwitchDefault, FormsModule],
+  imports: [FormsModule],
   templateUrl: './voting-age-validator.component.html',
   styleUrl: './voting-age-validator.component.scss'
 })
