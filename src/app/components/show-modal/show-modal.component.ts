@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { NgIf } from "@angular/common";
 
 @Component({
   selector: 'app-show-modal',
   standalone: true,
-  imports: [NgIf],
+  imports: [],
   templateUrl: './show-modal.component.html',
   styleUrl: './show-modal.component.scss'
 })
