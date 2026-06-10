@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgSwitch, NgSwitchCase, NgSwitchDefault } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 
 @Component({
