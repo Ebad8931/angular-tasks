@@ -1,1 +1,21 @@
-<p>dark-mode-toggle works!</p>
+<button (click)="toggleMode()">
+  {{ isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode" }}
+</button>
+
+<div class="box" [ngClass]="colorMode">
+  <h1>Light Mode</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed totam
+    voluptatum error quo, dignissimos blanditiis maiores eaque quis id eligendi
+    omnis modi earum repellat velit tempora explicabo. Ipsa, fugit repudiandae!
+  </p>
+</div>
+
+<div class="box" [ngClass]="colorMode">
+  <h1>Dark Mode</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed totam
+    voluptatum error quo, dignissimos blanditiis maiores eaque quis id eligendi
+    omnis modi earum repellat velit tempora explicabo. Ipsa, fugit repudiandae!
+  </p>
+</div>
