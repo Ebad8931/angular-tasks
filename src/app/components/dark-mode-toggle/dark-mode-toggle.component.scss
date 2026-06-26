@@ -1,0 +1,19 @@
+button {
+  background-color: rgb(81, 89, 80);
+  position: relative;
+  top: -0.5rem;
+  border: none;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #262525;
+}
