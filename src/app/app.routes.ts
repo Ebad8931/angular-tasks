@@ -7,6 +7,7 @@ import { KeyboardCounterComponent } from './components/keyboard-counter/keyboard
 import { SimpleCartComponent } from './components/simple-cart/simple-cart.component';
 import { ShowModalComponent } from './components/show-modal/show-modal.component';
 import { VotingAgeValidatorComponent } from './components/voting-age-validator/voting-age-validator.component';
+import { DarkModeToggleComponent } from './components/dark-mode-toggle/dark-mode-toggle.component';
 
 export const routes: Routes = [
     { path: '', component: LandingPageComponent },  // Default route
@@ -17,5 +18,6 @@ export const routes: Routes = [
     { path: 'simple-cart', component: SimpleCartComponent },
     { path: 'show-modal', component: ShowModalComponent },
     { path: 'voter-age-checker', component: VotingAgeValidatorComponent },
+    { path: 'dark-mode-toggle', component: DarkModeToggleComponent },
     { path: '**', redirectTo: '' }
 ];
