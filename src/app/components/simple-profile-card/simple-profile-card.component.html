@@ -1,1 +1,86 @@
-<p>simple-profile-card works!</p>
+<h1>Profile</h1>
+
+<h2>Personal Information</h2>
+<form>
+  <div>
+    <label for="name">Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      autocomplete="chrome-off"
+      [(ngModel)]="name"
+    />
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input
+      type="text"
+      id="email"
+      name="email"
+      autocomplete="chrome-off"
+      [(ngModel)]="email"
+    />
+  </div>
+  <div>
+    <label for="phone">Phone</label>
+    <input
+      type="tel"
+      id="phone"
+      name="phone"
+      autocomplete="chrome-off"
+      [(ngModel)]="phone"
+    />
+  </div>
+  <div>
+    <label for="location">Location</label>
+    <input
+      type="text"
+      id="location"
+      name="location"
+      autocomplete="chrome-off"
+      [(ngModel)]="location"
+    />
+  </div>
+</form>
+
+<h2>Qualifications</h2>
+<div *ngFor="let q of qualifications; let i = index">
+  <h3>Qualification {{ i + 1 }}</h3>
+  <form>
+    <div>
+      <label for="school">School/College</label>
+      <input
+        type="text"
+        id="school"
+        name="prevent-autofill"
+        autocomplete="chrome-off"
+        [(ngModel)]="q.school"
+      />
+    </div>
+    <div>
+      <label for="degree">Degree</label>
+      <input
+        type="text"
+        id="degree"
+        name="prevent-autofill"
+        autocomplete="chrome-off"
+        [(ngModel)]="q.degree"
+      />
+    </div>
+    <div>
+      <label for="year">Year</label>
+      <input
+        type="text"
+        id="year"
+        name="prevent-autofill"
+        autocomplete="chrome-off"
+        [(ngModel)]="q.degree"
+      />
+    </div>
+  </form>
+</div>
+<div class="btn-container">
+  <button (click)="addQualification()">Add Qualification</button>
+  <button>Submit</button>
+</div>
