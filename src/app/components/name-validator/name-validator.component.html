@@ -3,5 +3,7 @@
     <input type="text" [(ngModel)]="fullNameValue" />
     <label>Full Name</label>
   </div>
-  <h3 *ngIf="fullNameValue === ''">Please enter your name</h3>
+  <ng-container *ngIf="fullNameValue === ''">
+    <h3>Please enter your name</h3>
+  </ng-container>
 </div>
