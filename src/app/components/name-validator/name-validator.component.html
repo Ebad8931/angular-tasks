@@ -1,0 +1,10 @@
+<div class="box">
+  <div class="input-container">
+    <input type="text" [(ngModel)]="fullNameValue" />
+    <label>Full Name</label>
+  </div>
+  <ng-container *ngIf="fullNameValue !== ''; else notValid"> </ng-container>
+  <ng-template #notValid>
+    <h3>Please enter your name</h3>
+  </ng-template>
+</div>
