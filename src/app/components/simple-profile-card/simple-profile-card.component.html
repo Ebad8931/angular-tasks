@@ -1,86 +1,109 @@
-<h1>Profile</h1>
+@if (showHeading) {
+  <h1>Profile</h1>
+}
 
-<h2>Personal Information</h2>
-<form>
-  <div>
-    <label for="name">Name</label>
-    <input
-      type="text"
-      id="name"
-      name="name"
-      autocomplete="chrome-off"
-      [(ngModel)]="name"
-    />
-  </div>
-  <div>
-    <label for="email">Email</label>
-    <input
-      type="text"
-      id="email"
-      name="email"
-      autocomplete="chrome-off"
-      [(ngModel)]="email"
-    />
-  </div>
-  <div>
-    <label for="phone">Phone</label>
-    <input
-      type="tel"
-      id="phone"
-      name="phone"
-      autocomplete="chrome-off"
-      [(ngModel)]="phone"
-    />
-  </div>
-  <div>
-    <label for="location">Location</label>
-    <input
-      type="text"
-      id="location"
-      name="location"
-      autocomplete="chrome-off"
-      [(ngModel)]="location"
-    />
-  </div>
-</form>
-
-<h2>Qualifications</h2>
-<div *ngFor="let q of qualifications; let i = index">
-  <h3>Qualification {{ i + 1 }}</h3>
+<ng-container *ngIf="!submitted; else preview">
+  <h2>Personal Information</h2>
   <form>
     <div>
-      <label for="school">School/College</label>
+      <label for="name">Name</label>
       <input
         type="text"
-        id="school"
-        name="prevent-autofill"
+        id="name"
         autocomplete="chrome-off"
-        [(ngModel)]="q.school"
+        name="name"
+        [(ngModel)]="name"
       />
     </div>
     <div>
-      <label for="degree">Degree</label>
+      <label for="email">Email</label>
       <input
         type="text"
-        id="degree"
-        name="prevent-autofill"
+        id="email"
         autocomplete="chrome-off"
-        [(ngModel)]="q.degree"
+        name="email"
+        [(ngModel)]="email"
       />
     </div>
     <div>
-      <label for="year">Year</label>
+      <label for="phone">Phone</label>
+      <input
+        type="tel"
+        id="phone"
+        autocomplete="chrome-off"
+        name="phone"
+        [(ngModel)]="phone"
+      />
+    </div>
+    <div>
+      <label for="location">Location</label>
       <input
         type="text"
-        id="year"
-        name="prevent-autofill"
+        id="location"
         autocomplete="chrome-off"
-        [(ngModel)]="q.degree"
+        name="location"
+        [(ngModel)]="location"
       />
+    </div>
+
+    <h2>Qualifications</h2>
+    <div *ngFor="let q of qualifications; let i = index">
+      <h3>Qualification {{ i + 1 }}</h3>
+      <div>
+        <label [for]="'school-' + i">School/College</label>
+        <input
+          type="text"
+          autocomplete="chrome-off"
+          [id]="'school-' + i"
+          [name]="'school-' + i"
+          [(ngModel)]="q.school"
+        />
+      </div>
+      <div>
+        <label [for]="'degree-' + i">Degree</label>
+        <input
+          type="text"
+          autocomplete="chrome-off"
+          [id]="'degree-' + i"
+          [name]="'degree-' + i"
+          [(ngModel)]="q.degree"
+        />
+      </div>
+      <div>
+        <label [for]="'year-' + i">Year</label>
+        <input
+          type="text"
+          autocomplete="chrome-off"
+          [id]="'year-' + i"
+          [name]="'year-' + i"
+          [(ngModel)]="q.year"
+        />
+      </div>
+    </div>
+
+    <div class="btn-container">
+      <button (click)="addQualification()">Add Qualification</button>
+      <button type="submit" (click)="formSubmit()">Submit</button>
     </div>
   </form>
-</div>
-<div class="btn-container">
-  <button (click)="addQualification()">Add Qualification</button>
-  <button>Submit</button>
-</div>
+</ng-container>
+
+<ng-template #preview>
+  <div class="preview-container">
+    <h2>Preview</h2>
+    <div>
+      <p>{{ name }}</p>
+      <p>Email: {{ email }}</p>
+      <p>Phone: {{ phone }}</p>
+      <p>Location: {{ location }}</p>
+    </div>
+    <div>
+      <h3>Qualifications</h3>
+      <div *ngFor="let q of qualifications">
+        <h4>School/College: {{ q.school }}</h4>
+        <h4>Degree: {{ q.degree }} {{ q.year }}</h4>
+      </div>
+    </div>
+    <button class="btn-edit" (click)="formEdit()">Edit</button>
+  </div>
+</ng-template>
