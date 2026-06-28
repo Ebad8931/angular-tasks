@@ -1,10 +1,11 @@
 @if (showHeading) {
-  <h1>Profile</h1>
+  <h1>Profile Card</h1>
 }
 
 <ng-container *ngIf="!submitted; else preview">
-  <h2>Personal Information</h2>
   <form>
+    <h2>Personal Information</h2>
+
     <div>
       <label for="name">Name</label>
       <input
@@ -18,7 +19,7 @@
     <div>
       <label for="email">Email</label>
       <input
-        type="text"
+        type="email"
         id="email"
         autocomplete="chrome-off"
         name="email"
@@ -92,7 +93,7 @@
   <div class="preview-container">
     <h2>Preview</h2>
     <div>
-      <p>{{ name }}</p>
+      <p class="name">{{ name }}</p>
       <p>Email: {{ email }}</p>
       <p>Phone: {{ phone }}</p>
       <p>Location: {{ location }}</p>

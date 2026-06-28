@@ -1,0 +1,75 @@
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #808080;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1.25rem;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+form input {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: #03284e;
+  color: #fff;
+  border: none;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+button:hover {
+  background-color: #093158;
+}
+
+.preview-container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  bottom: -20rem;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px #808080;
+  width: 32rem;
+  padding: 1.25rem
+}
+
+.btn-edit {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.25rem;
+}
+
+.name {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
